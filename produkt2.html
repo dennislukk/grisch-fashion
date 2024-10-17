@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colmar Originals - Produktdetaljer</title>
+    <link rel="stylesheet" href="stylepro1.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <a href="index.html">Grisch Fashion</a>
+        </div>
+        <div class="nav-right"></div>
+            <a href="#" id="account-button">≡</a>
+            <div id="account-menu" class="hidden">
+                <ul>
+                    <li><a href="create-account.html">Nyheter</a></li>
+                    <li><a href="usedclothing.html">Kjøp brukt</a></li>
+                    <li><a href="innstillinger.html">Innstillinger</a></li>
+                    <li><a href="hjelp.html">Hjelp</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    </nav>
+
+    <header>
+        <h1>Urban Edge</h1>
+    </header>
+
+    <div class="product-detail">
+        <div class="product-image">
+            <img src="Skjermbilde_2024-10-16_205500-removebg-preview.png" alt="Colmar Originals">
+        </div>
+        <div class="product-info">
+            <h2>UrbanEdge</h2>
+            <p>Puffed cardigan - navy blue</p>
+            <p>Cardigan made in top quality, avalible in limited stock!</p>
+            <a href="https://urbanedgestore.net/products/uten-tittel-18-aug-_15-26" target="_blank" class="button">View product</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 grischfashion.com</p>
+        <ul>
+            <li><a href="#">Privacy</a></li>
+            <li><a href="terms.html">Terms</a></li>
+            <li><a href="mailto:dennis.lukkedal@gmail.com" class="contact-button">Contact us</a></li>
+        </ul>
+    </footer>
+
+    <script>
+        document.getElementById("account-button").addEventListener("click", function(event) {
+            event.preventDefault(); // Hindrer at siden oppdateres ved klikk
+            var menu = document.getElementById("account-menu");
+            menu.classList.toggle("hidden"); // Veksler mellom å vise og skjule menyen
+        });
+
+        document.addEventListener("click", function(event) {
+            var menu = document.getElementById("account-menu");
+            var button = document.getElementById("account-button");
+
+            if (!menu.contains(event.target) && !button.contains(event.target)) {
+                menu.classList.add("hidden");
+            }
+        });
+    </script>
+</body>
+</html>

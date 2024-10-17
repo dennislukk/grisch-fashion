@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Innstillinger - Grisch Fashion</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- Navigasjonsbar -->
+    <nav>
+        <div class="logo">
+            <a href="index.html">Grisch Fashion</a>
+        </div>
+        <div class="nav-right">
+            <a href="#" id="account-button">≡</a>
+            <div id="account-menu" class="hidden">
+                <ul>
+                    <li><a href="create-account.html">Latest arrivals</a></li>
+                    <li><a href="usedclothing.html">Buy used</a></li>
+                    <li><a href="innstillinger.html">Settings</a></li>
+                    <li><a href="hjelp.html">Help</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    </nav>
+
+    <!-- Hovedinnhold -->
+    <section class="settings-container">
+        <h1>Settings</h1>
+        <div class="settings-menu">
+            <div class="setting-option">
+                <h2>Theme</h2>
+                <p>Change between light and dark mode</p>
+                <button id="toggleTheme">Change to dark mode</button>
+            </div>
+            
+            <div class="setting-option">
+                <h2>Language</h2>
+                <p>Pick your preferred language</p>
+                <select id="languageSelect">
+                    <option value="en">English</option>
+                    <option value="no">Norsk</option>
+                    <option value="de">Deutsch</option>
+                </select>
+            </div>
+
+            <div class="setting-option">
+                <h2>Notifications</h2>
+                <p>Turn notifications on/off</p>
+                <label>
+                    <input type="checkbox" id="notificationsToggle"> Activate notifications
+                </label>
+            </div>
+
+            <div class="setting-option">
+                <h2>Privacy</h2>
+                <p>View and manage your privacy settings</p>
+                <a href="#">Administrate privacy</a>
+            </div>
+
+            <div class="setting-option">
+                <h2>Feedback</h2>
+                <p>Give us your review</p>
+                <a href="#">Leave a review</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 grischfashion.com</p>
+        <ul>
+            <li><a href="#">Privacy</a></li>
+            <li><a href="terms.html">Terms</a></li>
+            <li><a href="mailto:dennis.lukkedal@gmail.com" class="contact-button">Contact us</a></li>
+        </ul>
+    </footer>
+
+    <script>
+        document.getElementById("account-button").addEventListener("click", function(event) {
+            event.preventDefault(); // Hindrer at siden oppdateres ved klikk
+            var menu = document.getElementById("account-menu");
+            menu.classList.toggle("hidden"); // Veksler mellom å vise og skjule menyen
+        });
+
+        document.addEventListener("click", function(event) {
+            var menu = document.getElementById("account-menu");
+            var button = document.getElementById("account-button");
+
+            if (!menu.contains(event.target) && !button.contains(event.target)) {
+                menu.classList.add("hidden");
+            }
+        });
+
+        document.getElementById("notificationsToggle").addEventListener("change", function(event) {
+    if (event.target.checked) {
+        // Sjekk om nettleseren støtter Notifications API
+        if ('Notification' in window) {
+            // Sjekk gjeldende tillatelsesstatus
+            if (Notification.permission === 'granted') {
+                alert('Varsler er allerede aktivert.');
+            } else if (Notification.permission === 'denied') {
+                alert('Du har tidligere blokkert varsler. Gå til nettleserinnstillingene dine for å endre dette.');
+            } else {
+                // Be om tillatelse til å vise varsler
+                Notification.requestPermission().then(function(permission) {
+                    if (permission === 'granted') {
+                        alert('Varsler er aktivert!');
+                    } else {
+                        alert('Varsler er deaktivert.');
+                        event.target.checked = false; // Deaktiver avmerkingsboksen hvis tillatelse ikke ble gitt
+                    }
+                });
+            }
+        } else {
+            alert('Varslinger støttes ikke i denne nettleseren.');
+        }
+    } else {
+        alert('Varsler er deaktivert.');
+    }
+});
+
+    </script>
+</body>
+</html>

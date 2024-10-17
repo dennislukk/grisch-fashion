@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grisch Fashion</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <a href="#">Grisch Fashion</a>
+        </div>
+        <div class="nav-right">
+            <a href="#" id="account-button">≡</a>
+            <div id="account-menu" class="hidden">
+                <ul>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="usedclothing.html">Buy used</a></li>
+                    <li><a href="innstillinger.html">Settings</a></li>
+                    <li><a href="hjelp.html">Help</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+        
+    </nav>
+
+    <header>
+        <h1>Popular products</h1>
+    </header>
+    
+    <section class="product-grid">
+        <div class="product">
+            <img src="image-removebg-preview.png" alt="Produkt 1">
+            <h2>Colmar Originals</h2>
+            <p>Light jacket - navy blue</p>
+            <a href="https://www.zalando.no/colmar-originals-mens-jacket-lett-jakke-navy-blue-cm022t087-k11.html" class="button">View product</a>
+        </div>
+        
+        <div class="product">
+            <img src="Skjermbilde_2024-10-16_205500-removebg-preview.png" alt="Produkt 2">
+            <h2>UrbanEdge</h2>
+            <p>Puffed cardigan - navy blue</p>
+            <a href="produkt2.html" class="button">View product</a>
+        </div>
+        
+        <div class="product">
+            <img src="440_3c0f66c4-ba26-4b2b-bd32-caa9379ee593-removebg-preview.png" alt="Produkt 3">
+            <h2>Gran Sasso</h2>
+            <p>Knit/Zip cardigan - jacket grey</p>
+            <a href="https://www.careofcarl.no/no/gran-sasso-wool-button-knit-zip-cardigan-jacket-grey" target="_blank" class="button">View product</a>
+        </div>
+
+        <div class="product">
+            <img src="pm-01.png" alt="Produkt 1">
+            <h2>Philippe Model</h2>
+            <p>PRSX - blue</p>
+            <a href="philippemodel.html" class="button">View product</a>
+        </div>
+        
+        <div class="product">
+            <img src="morris.png" alt="Produkt 2">
+            <h2>Morris</h2>
+            <p>Half Zip - navy blue</p>
+            <a href="https://www.boozt.com/fi/fi/morris/merino-john-zip_31761414/225713646?navId=67777&group=carousel_67773|67777" target="_blank" class="button">View product</a>
+        </div>
+        
+        <div class="product">
+            <img src="produkt3.jpg" alt="Produkt 3">
+            <h2>Produkt 3</h2>
+            <p>Dette er en kort beskrivelse av produkt 3.</p>
+            <a href="https://www.finn.no/product3" target="_blank" class="button">View Zip|</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 grischfashion.com</p>
+        <ul>
+            <li><a href="#">Privacy</a></li>
+            <li><a href="terms.html">Terms</a></li>
+            <li><a href="mailto:dennis.lukkedal@gmail.com" class="contact-button">Contact us</a></li>
+        </ul>
+    </footer>
+
+    <script>
+        document.getElementById("account-button").addEventListener("click", function(event) {
+            event.preventDefault(); // Hindrer at siden oppdateres ved klikk
+            var menu = document.getElementById("account-menu");
+            menu.classList.toggle("hidden"); // Veksler mellom å vise og skjule menyen
+        });
+
+        document.addEventListener("click", function(event) {
+            var menu = document.getElementById("account-menu");
+            var button = document.getElementById("account-button");
+
+            if (!menu.contains(event.target) && !button.contains(event.target)) {
+                menu.classList.add("hidden");
+            }
+        });
+    </script>
+</body>
+</html>
+
