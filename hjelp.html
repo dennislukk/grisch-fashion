@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hjelp - Grisch Fashion</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Spesifikke stiler for Hjelp-siden */
+        body {
+            background-color: #f9f9f9;
+            padding-top: 80px; /* Samme avstand som navigasjonsbaren */
+        }
+
+        .help-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 2rem;
+            color: #005b82;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .faq-item {
+            margin-bottom: 15px;
+            border: 1px solid #005b82;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .faq-title {
+            background-color: #005b82;
+            color: white;
+            padding: 15px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .faq-title:hover {
+            background-color: #004466;
+        }
+
+        .faq-content {
+            display: none; /* Skjuler innholdet som standard */
+            padding: 15px;
+            background-color: #f1f1f1;
+            max-height: 0; /* Setter høyden til 0 som standard */
+            overflow: hidden; /* Skjuler innholdet som går utover */
+            transition: max-height 0.3s ease; /* Animasjon for å åpne/lukke */
+        }
+
+        .faq-content.open {
+            display: block; /* Viser innholdet */
+            max-height: 200px; /* Setter maksimal høyde */
+        }
+
+        .contact-button {
+            display: block;
+            margin: 30px auto;
+            padding: 15px 30px;
+            background-color: #005b82;
+            color: white;
+            text-decoration: none;
+            text-align: center;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .contact-button:hover {
+            background-color: #004466;
+        }
+
+        .contact-button2 {
+            display: block;
+            margin: 30px auto;
+            padding: 15px 30px;
+            background-color: #09161b;
+            color: white;
+            text-decoration: none;
+            text-align: center;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .contact-button2:hover {
+            background-color: #004466;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <a href="index.html">Grisch Fashion</a>
+        </div>
+        <div class="nav-right">
+            <a href="#" id="account-button">≡</a>
+            <div id="account-menu" class="hidden">
+                <ul>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="usedclothing.html">Buy used</a></li>
+                    <li><a href="innstillinger.html">Settings</a></li>
+                    <li><a href="hjelp.html">Help</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="help-container">
+        <h1>Frequently Asked Questions (FAQ)</h1>
+
+        <div class="faq-item">
+            <div class="faq-title">How do I order?</div>
+            <div class="faq-content">
+                <p>New/Store: You will be redirected to their website.</p>
+                <p>Second-hand: Click "contact seller", then you will be redirected to instagram messages.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-title">How can I return a order?</div>
+            <div class="faq-content">
+                <p>Orders through Second-hand (seller) can be returned, please contact us on mail.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-title">Can I sell my items?</div>
+            <div class="faq-content">
+                <p>If you would like to sell an item, please send a request to our mail.</p>
+                <a href="mailto:info@grischfashion.com" class="contact-button">I want to sell</a>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-title">When does the site get new products?</div>
+            <div class="faq-content">
+                <p>Our site comes with new products every week!</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-title">How can I contact you?</div>
+            <div class="faq-content">
+                <p>Du kan kontakte kundeservice via e-post eller telefon, som er tilgjengelig på vår kontaktside.</p>
+            </div>
+        </div>
+
+        <a href="mailto:info@grischfashion.com" class="contact-button2">Contact us on mail</a>
+    </div>
+
+    <script>
+        // JavaScript for å håndtere klikk på FAQ-titler
+        document.querySelectorAll('.faq-title').forEach(item => {
+            item.addEventListener('click', () => {
+                const content = item.nextElementSibling;
+                const isOpen = content.classList.contains('open');
+                
+                // Lukk alle andre innhold
+                document.querySelectorAll('.faq-content').forEach(faq => {
+                    faq.classList.remove('open');
+                    faq.style.display = 'none'; // Sørg for at innholdet ikke vises
+                    faq.style.maxHeight = '0'; // Sett høyden til 0 når lukket
+                });
+
+                // Bare åpne den som er klikket på hvis den var lukket
+                if (!isOpen) {
+                    content.classList.add('open');
+                    content.style.display = 'block'; // Vis innholdet
+                    content.style.maxHeight = '200px'; // Sett maksimal høyde for åpning
+                }
+            });
+        });
+
+        
+        document.getElementById("account-button").addEventListener("click", function(event) {
+            event.preventDefault(); // Hindrer at siden oppdateres ved klikk
+            var menu = document.getElementById("account-menu");
+            menu.classList.toggle("hidden"); // Veksler mellom å vise og skjule menyen
+        });
+
+        document.addEventListener("click", function(event) {
+            var menu = document.getElementById("account-menu");
+            var button = document.getElementById("account-button");
+
+            if (!menu.contains(event.target) && !button.contains(event.target)) {
+                menu.classList.add("hidden");
+            }
+        });
+    </script>
+</body> 
+</html>
