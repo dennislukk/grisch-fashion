@@ -51,7 +51,7 @@ html, body {
 }
 
 body {
-    background-image: url(31660-3840x2160-desktop-4k-italy-wallpaper.jpg); /* Sett inn stien til bildet */
+   background-color: #96bbda;
     background-size: cover; /* Sørg for at bildet dekker hele skjermen */
     background-position: center; /* Sentrer bakgrunnsbildet */
     background-attachment: fixed; /* Gjør bakgrunnsbildet fast når du ruller */
@@ -65,7 +65,7 @@ body {
 
 /* Navigasjonsbar */
 nav {
-    background-color: #005b82;
+    background-color: #000000;
     width: 100%;
     padding: 15px 0;
     display: flex;
@@ -131,7 +131,7 @@ h1 {
 
 /* Footer */
 footer {
-    background-color: #005b82;
+    background-color: #000000;
     color: white;
     padding: 20px 0;
     width: 100%;
