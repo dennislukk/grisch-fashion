@@ -74,6 +74,11 @@
         </div>
     </section>
 
+    <div id="popup-message" class="popup hidden">
+        <p>Want to buy used?</p>
+        <a href="usedclothing.html" class="popup-button">Yes, take me there!</a>
+    </div>
+
     <footer>
         <p>&copy; 2024 grischfashion.com</p>
         <ul>
@@ -98,7 +103,20 @@
                 menu.classList.add("hidden");
             }
         });
+
+        setTimeout(function() {
+            var popup = document.getElementById("popup-message");
+            popup.style.display = 'block';
+
+            // Hide after 5 seconds if not clicked
+            setTimeout(function() {
+                popup.style.display = 'none';
+            }, 5000);
+        }, 3000); // Shows after 3 seconds
     </script>
+
+
+    
 </body>
 </html>
 
