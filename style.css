@@ -477,59 +477,60 @@ footer ul li a:hover {
         font-size: 0.9rem;
     }
 
-    .popup {
+    #popup-box {
         bottom: 10px;
         right: 10px;
-        padding: 15px;
-    }
-
-    .popup p {
-        font-size: 0.9rem;
-    }
-
-    .popup-button {
-        font-size: 0.9rem;
-        padding: 8px 12px;
+        width: 90%;
+        text-align: center;
     }
 }
 
 
-/* Popup message styling */
-.popup {
+#popup-box {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: #96bbda;
-    color: rgb(0, 0, 0);
-    padding: 20px;
+    background-color: #004466;
+    color: white;
+    padding: 15px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    display: none; /* Initially hidden */
     z-index: 1000;
-    display: flex;
-    align-items: center;
-    gap: 30px;
+    max-width: 300px;
+    position: fixed;
 }
 
-.popup p {
-    margin-bottom: 10px;
-    font-size: 1rem;
+#popup-box p {
+    margin: 0;
 }
 
-.popup-button {
-    background-color: #ffffff;
-    color: #005b82;
-    padding: 10px 15px;
+#popup-box button {
+    background-color: #96bbda;
+    color: #004466;
+    border: none;
+    padding: 10px;
     border-radius: 5px;
-    text-decoration: none;
-    font-size: 1rem;
-    transition: background-color 0.3s ease;
+    cursor: pointer;
+    margin-top: 10px;
 }
 
-.popup-button:hover {
-    background-color: #f0f0f0;
+#popup-box button:hover {
+    background-color: #dddddd;
 }
 
-/* Hidden class for popup */
-.hidden {
-    display: none;
+/* Close button (X) */
+#popup-box .close-btn {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#popup-box .close-btn:hover {
+    color: #ffdddd;
 }

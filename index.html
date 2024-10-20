@@ -15,7 +15,8 @@
             <a href="#" id="account-button">≡</a>
             <div id="account-menu" class="hidden">
                 <ul>
-                    <li><a href="products.html">Products</a></li>
+                    <li><a href="products.html">Clothing</a></li>
+                    <li><a href="shoes.html">Shoes</a></li>
                     <li><a href="usedclothing.html">Buy used</a></li>
                     <li><a href="innstillinger.html">Settings</a></li>
                     <li><a href="hjelp.html">Help</a></li>
@@ -72,11 +73,33 @@
             <p>Anbass - blue</p>
             <a href="https://www.boozt.com/no/no/replay/32701793_32701793/228412285" class="button">View product</a>
         </div>
+
+        <div class="product">
+            <img src="pm-01.png" alt="Produkt 1">
+            <h2>Philippe Model</h2>
+            <p>PRSX - blue</p>
+            <a href="philippemodel.html" class="button">View product</a>
+        </div>
+        
+        <div class="product">
+            <img src="morris.png" alt="Produkt 2">
+            <h2>Morris</h2>
+            <p>Half Zip - navy blue</p>
+            <a href="https://www.boozt.com/fi/fi/morris/merino-john-zip_31761414/225713646?navId=67777&group=carousel_67773|67777" class="button">View product</a>
+        </div>
+        
+        <div class="product">
+            <img src="bukse-01.png" alt="Produkt 3">
+            <h2>Replay</h2>
+            <p>Anbass - blue</p>
+            <a href="https://www.boozt.com/no/no/replay/32701793_32701793/228412285" class="button">View product</a>
+        </div>
     </section>
 
-    <div id="popup-message" class="popup hidden">
-        <p>Want to buy used?</p>
-        <a href="usedclothing.html" class="popup-button">Yes, take me there!</a>
+    <div id="popup-box">
+        <button class="close-btn" onclick="closePopup()">×</button>
+        <p>Buy used?</p>
+        <button onclick="window.location.href='buyused.html'">Yes, take me there!</button>
     </div>
 
     <footer>
@@ -104,15 +127,22 @@
             }
         });
 
+        // Show pop-up after 3 seconds
         setTimeout(function() {
-            var popup = document.getElementById("popup-message");
+            var popup = document.getElementById("popup-box");
             popup.style.display = 'block';
 
-            // Hide after 5 seconds if not clicked
+            // Auto-hide after 5 seconds if not clicked
             setTimeout(function() {
                 popup.style.display = 'none';
             }, 5000);
-        }, 3000); // Shows after 3 seconds
+        }, 3000);
+
+        // Close pop-up function
+        function closePopup() {
+            var popup = document.getElementById("popup-box");
+            popup.style.display = 'none';
+        }
     </script>
 
 
