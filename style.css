@@ -102,13 +102,22 @@ h1 {
 
 /* Produktkort */
 .product {
-    background-color: rgba(255, 255, 255, 0.8); /* Hvit med 80% opasitet */
+    position: relative; /* Gjør det mulig å posisjonere logoen relativt til produktboksen */
+    background-color: rgba(255, 255, 255, 0.8);
     border-radius: 15px;
     padding: 20px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
     text-align: center;
     transition: transform 0.3s;
     width: 100%;
+    height: auto;
+}
+
+.product-logo {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 60px; /* Juster størrelsen etter behov */
     height: auto;
 }
 
@@ -477,47 +486,22 @@ footer ul li a:hover {
         font-size: 0.9rem;
     }
 
-    #popup-box {
+    .popup {
         bottom: 10px;
         right: 10px;
-        width: 90%;
-        text-align: center;
+        padding: 15px;
+    }
+
+    .popup p {
+        font-size: 0.9rem;
+    }
+
+    .popup-button {
+        font-size: 0.9rem;
+        padding: 8px 12px;
     }
 }
 
-
-#popup-box {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #004466;
-    color: white;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    display: none; /* Initially hidden */
-    z-index: 1000;
-    max-width: 300px;
-    position: fixed;
-}
-
-#popup-box p {
-    margin: 0;
-}
-
-#popup-box button {
-    background-color: #96bbda;
-    color: #004466;
-    border: none;
-    padding: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 10px;
-}
-
-#popup-box button:hover {
-    background-color: #dddddd;
-}
 
 /* Close button (X) */
 #popup-box .close-btn {
@@ -533,4 +517,44 @@ footer ul li a:hover {
 
 #popup-box .close-btn:hover {
     color: #ffdddd;
+}
+
+/* Popup message styling */
+.popup {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #005b82;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.popup p {
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+.popup-button {
+    background-color: #ffffff;
+    color: #005b82;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.popup-button:hover {
+    background-color: #f0f0f0;
+}
+
+/* Hidden class for popup */
+.hidden {
+    display: none;
 }

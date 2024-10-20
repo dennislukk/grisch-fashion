@@ -34,6 +34,7 @@
     <section class="product-grid">
         <div class="product">
             <img src="image-removebg-preview.png" alt="Produkt 1">
+            <img src="Colmar.svg.png" alt="Logo" class="product-logo"> <!-- Logoen legges til her -->
             <h2>Colmar Originals</h2>
             <p>Light jacket - navy blue</p>
             <a href="https://www.zalando.no/colmar-originals-mens-jacket-lett-jakke-navy-blue-cm022t087-k11.html" class="button">View product</a>
@@ -48,6 +49,7 @@
         
         <div class="product">
             <img src="440_3c0f66c4-ba26-4b2b-bd32-caa9379ee593-removebg-preview.png" alt="Produkt 3">
+            <img src="Gran Sasso.png" alt="Logo" class="product-logo"> <!-- Logoen legges til her -->
             <h2>Gran Sasso</h2>
             <p>Knit/Zip cardigan - jacket grey</p>
             <a href="https://www.careofcarl.no/no/gran-sasso-wool-button-knit-zip-cardigan-jacket-grey" class="button">View product</a>
@@ -55,6 +57,7 @@
 
         <div class="product">
             <img src="pm-01.png" alt="Produkt 1">
+            <img src="Philippe_Model_LogoV2.png" alt="Logo" class="product-logo"> <!-- Logoen legges til her -->
             <h2>Philippe Model</h2>
             <p>PRSX - blue</p>
             <a href="philippemodel.html" class="button">View product</a>
@@ -62,6 +65,7 @@
         
         <div class="product">
             <img src="morris.png" alt="Produkt 2">
+            <img src="morrislogo.png" alt="Logo" class="product-logo"> <!-- Logoen legges til her -->
             <h2>Morris</h2>
             <p>Half Zip - navy blue</p>
             <a href="https://www.boozt.com/fi/fi/morris/merino-john-zip_31761414/225713646?navId=67777&group=carousel_67773|67777" class="button">View product</a>
@@ -69,37 +73,16 @@
         
         <div class="product">
             <img src="bukse-01.png" alt="Produkt 3">
-            <h2>Replay</h2>
-            <p>Anbass - blue</p>
-            <a href="https://www.boozt.com/no/no/replay/32701793_32701793/228412285" class="button">View product</a>
-        </div>
-
-        <div class="product">
-            <img src="pm-01.png" alt="Produkt 1">
-            <h2>Philippe Model</h2>
-            <p>PRSX - blue</p>
-            <a href="philippemodel.html" class="button">View product</a>
-        </div>
-        
-        <div class="product">
-            <img src="morris.png" alt="Produkt 2">
-            <h2>Morris</h2>
-            <p>Half Zip - navy blue</p>
-            <a href="https://www.boozt.com/fi/fi/morris/merino-john-zip_31761414/225713646?navId=67777&group=carousel_67773|67777" class="button">View product</a>
-        </div>
-        
-        <div class="product">
-            <img src="bukse-01.png" alt="Produkt 3">
+            <img src="replaylogo.png" alt="Logo" class="product-logo"> <!-- Logoen legges til her -->
             <h2>Replay</h2>
             <p>Anbass - blue</p>
             <a href="https://www.boozt.com/no/no/replay/32701793_32701793/228412285" class="button">View product</a>
         </div>
     </section>
 
-    <div id="popup-box">
-        <button class="close-btn" onclick="closePopup()">×</button>
+    <div id="popup-message" class="popup hidden">
         <p>Buy used?</p>
-        <button onclick="window.location.href='buyused.html'">Yes, take me there!</button>
+        <a href="buyused.html" class="popup-button">Take me there!</a>
     </div>
 
     <footer>
@@ -129,7 +112,7 @@
 
         // Show pop-up after 3 seconds
         setTimeout(function() {
-            var popup = document.getElementById("popup-box");
+            var popup = document.getElementById("popup-message");
             popup.style.display = 'block';
 
             // Auto-hide after 5 seconds if not clicked
@@ -140,7 +123,7 @@
 
         // Close pop-up function
         function closePopup() {
-            var popup = document.getElementById("popup-box");
+            var popup = document.getElementById("popup-message");
             popup.style.display = 'none';
         }
     </script>
