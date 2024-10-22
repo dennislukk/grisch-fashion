@@ -558,3 +558,26 @@ footer ul li a:hover {
 .hidden {
     display: none;
 }
+
+.mere {
+    position: relative; /* Gjør det mulig å posisjonere logoen relativt til produktboksen */
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    height: auto;
+}
+
+.mere p {
+    font-size: 1.1rem;
+    color: #777;
+    margin-bottom: 20px;
+}
+
+.mere a {
+    text-decoration: none;
+    color: white;
+    background-color: #005b82;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
