@@ -66,17 +66,17 @@ nav .nav-links li a:hover {
 }
 
 nav .nav-right a {
-    color: white;
+    color: rgb(255, 255, 255);
     text-decoration: none;
     margin-right: 20px;
     padding: 10px 20px;
-    background-color: #777;
+    background-color: #ffffff;
     border-radius: 5px;
     transition: background-color 0.3s;
 }
 
 nav .nav-right a:hover {
-    background-color: #777;
+    background-color: #ffffff;
 }
 
 /* Header */    
@@ -284,10 +284,10 @@ footer ul li a:hover {
     position: absolute;
     right: 20px;
     top: 60px;
-    background-color: #004466;
+    background-color: #ffffff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(8, 20, 181, 0.7);
-    width: 200px; /* Menyboksens bredde */
+    width: 150px; /* Menyboksens bredde */
     padding: 10px;
     z-index: 1001;
 }
@@ -306,23 +306,23 @@ footer ul li a:hover {
     display: block; /* Gjør hver lenke til et blokk-element som fyller hele bredden */
     padding: 10px;
     text-decoration: none;
-    color: #ffffff;
+    color: #000000;
     font-size: 1rem;
     text-align: left; /* Venstrestiller teksten */
 }
 
 #account-menu ul li a:hover {
-    background-color: #ffffff;
+    background-color: #917bd1;
     border-radius: 5px;
-    color: black;
+    color: rgb(255, 255, 255);
 }
 
-#account-button {
-    color: rgb(255, 255, 255);
+#account-button { /*knappen som viser menyen*/
+    color: rgb(0, 0, 0);
     text-decoration: none;
     margin-right: 20px;
     padding: 10px 20px;
-    background-color: #004466;
+    background-color: #ffffff;
     border-radius: 5px;
     transition: background-color 0.3s;
 }
