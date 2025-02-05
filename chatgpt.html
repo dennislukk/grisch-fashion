@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grisch Fashion</title>
+    <link rel="stylesheet" href="chatgpt.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-content">
+            <span class="nav-title">Grisch Fashion</span>
+            <img src="x-icon.png" alt="Meny" class="menu-icon" id="open-menu">
+        </div>
+    </nav>
+    
+    <div class="overlay" id="nav-menu">
+        <img src="x-icon.png" alt="Lukk" class="close-icon" id="close-menu">
+        <ul>
+            <li><a href="#">Hjem</a></li>
+            <li><a href="#">Produkter</a></li>
+            <li><a href="#">Om oss</a></li>
+            <li><a href="#">Kontakt</a></li>
+        </ul>
+    </div>
+    
+    <header class="header">
+        <h1>Dennis Lukkedal</h1>
+    </header>
+        
+        <main class="carousel-container">
+            <button class="prev-btn">&#10094;</button>
+            <div class="carousel" id="carousel">
+                <div class="slide">
+                    <div class="product-box">
+                        <img src="fashionhelp.PNG" alt="Produkt 1" class="product-image">
+                        <p class="product-text">Produktbeskrivelse 1</p>
+                        <div class="price-icon"><img src="price-tag.png" alt="Pris"></div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="product-box">
+                        <img src="fashionhelp.PNG" alt="Produkt 2" class="product-image">
+                        <p class="product-text">Produktbeskrivelse 2</p>
+                        <div class="price-icon"><img src="price-tag.png" alt="Pris"></div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="product-box">
+                        <img src="fashionhelp.PNG" alt="Produkt 3" class="product-image">
+                        <p class="product-text">Produktbeskrivelse 3</p>
+                        <div class="price-icon"><img src="price-tag.png" alt="Pris"></div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="product-box">
+                        <img src="fashionhelp.PNG" alt="Produkt 4" class="product-image">
+                        <p class="product-text">Produktbeskrivelse 4</p>
+                        <div class="price-icon"><img src="price-tag.png" alt="Pris"></div>
+                    </div>
+                </div>
+            </div>
+            <button class="next-btn">&#10095;</button>
+        </main>
+        
+    
+    <footer>
+        <p>Copyright &copy; GrischFashion.com</p>
+        <div class="socials">
+            <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
+            <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
+            <a href="#"><img src="twitter-icon.png" alt="Twitter"></a>
+        </div>
+    </footer>
+    
+    <script>
+        document.getElementById('open-menu').addEventListener('click', function() {
+    document.getElementById('nav-menu').style.display = 'flex';
+});
+document.getElementById('close-menu').addEventListener('click', function() {
+    document.getElementById('nav-menu').style.display = 'none';
+});
+
+let index = 0;
+function showSlide(step) {
+    const slides = document.querySelectorAll('.slide');
+    index = (index + step + slides.length) % slides.length;
+    document.getElementById('carousel').style.transform = `translateX(-${index * 100}%)`;
+}
+document.querySelector('.prev-btn').addEventListener('click', () => showSlide(-1));
+document.querySelector('.next-btn').addEventListener('click', () => showSlide(1));
+setInterval(() => showSlide(1), 4000);
+    </script>
+</body>
+</html>
